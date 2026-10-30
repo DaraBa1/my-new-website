@@ -84,6 +84,68 @@
     </section>
 
   </div>
+  <section class="git-panel" id="git">
+  <div class="section-heading">
+    <span class="git-symbol">⎇</span>
+    <h2>Результати роботи з Git</h2>
+  </div>
+
+  <p class="section-description">
+    Історія комітів, гілки та результати виконання Git-команд.
+  </p>
+
+  <input type="radio" name="git-tab" id="tab-status" checked>
+  <input type="radio" name="git-tab" id="tab-branch">
+  <input type="radio" name="git-tab" id="tab-log">
+  <input type="radio" name="git-tab" id="tab-merge">
+
+  <div class="tab-labels">
+    <label for="tab-status">Git Status</label>
+    <label for="tab-branch">Git Branch</label>
+    <label for="tab-log">Git Log</label>
+    <label for="tab-merge">Merge History</label>
+  </div>
+
+  <div class="terminal">
+    <div class="terminal-header">
+      <div class="window-dots">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+      </div>
+      <span class="terminal-title">git-terminal</span>
+    </div>
+
+    <div class="terminal-body">
+      <pre class="tab-content status"><code>$ git status
+
+On branch main
+nothing to commit, working tree clean</code></pre>
+
+      <pre class="tab-content branch"><code>$ git branch -a
+
+* main
+  feature/about
+  remotes/origin/main
+  remotes/origin/feature/about</code></pre>
+
+      <pre class="tab-content log"><code>$ git log --oneline
+
+827f677 Merge branch main into feature/about and resolve conflict
+cf799d7 Change page heading
+5d6f488 Update main heading
+4bc3da7 Update hobbies list
+430bb8c Add hobbies section
+9687c87 Add initial website</code></pre>
+
+      <pre class="tab-content merge"><code>$ git log --merges
+
+commit 827f677
+Merge branch 'main' into feature/about</code></pre>
+    </div>
+  </div>
+</section>
+
 
   <footer class="footer">
     <p>Made with Git & GitHub Pages</p>
